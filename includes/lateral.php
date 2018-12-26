@@ -6,9 +6,9 @@
 
     <div id="usuario-logueado" class="bloque">
       <h3>Bienvenido, <?php echo $_SESSION['usuario']['NOMBRE'].' '.$_SESSION['usuario']['APELLIDO']; ?></h3>
-      <a href="cerrar.php" class="boton boton-verde">Crear entrada</a>
+      <a href="crear-entrada.php" class="boton boton-verde">Crear entrada</a>
       <a href="crear-categoria.php" class="boton">Crear categoria</a>
-      <a href="cerrar.php" class="boton boton-naranja">Mis datos</a>
+      <a href="mis-datos.php" class="boton boton-naranja">Mis datos</a>
       <a href="cerrar.php" class="boton boton-rojo">Cerrar sesión</a>
     </div>
       

@@ -18,9 +18,13 @@ function borrarErrores() {
     $_SESSION['completado'] = null;
   }
 
-  $borrado = session_unset();
+  if (isset($_SESSION['errores_entradas'])) {
+    $_SESSION['errores_entradas'] = null;
+  }
 
-  return $borrado;
+  // $borrado = session_unset();
+
+  return "listo";
 }
 
 function conseguirCategorias($db) {
