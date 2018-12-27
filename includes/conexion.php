@@ -1,7 +1,7 @@
 <?php
 
 // Conexión
-$db = mysqli_connect("localhost", "root", "", "php-blog");
+$db = mysqli_connect("127.0.0.1:56251", "azure", "6#vWHD_$", "php-blog");
 
 mysqli_query($db, "SET NAMES 'utf8'");
 
