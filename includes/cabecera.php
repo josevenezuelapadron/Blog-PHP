@@ -10,13 +10,14 @@ require_once 'helpers.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog PHP</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="https://cdn.iconscout.com/icon/free/png-256/php-28-226043.png" type="image/x-icon">
   </head>
   <body>
     <!-- Cabecera -->
     <header id="cabecera">
       <!-- Logo -->
       <div id="logo">
-        <a href="index.php">Blog PHP</a>
+        <a href="index.php">Blog PHP <img src="https://cdn.iconscout.com/icon/free/png-256/php-28-226043.png" alt="Icono" width="40" height="40"></a>
       </div>
 
       <!-- Menu -->
@@ -33,8 +34,8 @@ require_once 'helpers.php';
             endwhile;
             endif;
           ?>
-          <li><a href="index.php">Sobre mi</a></li>
-          <li><a href="index.php">Contacto</a></li>
+          <li><a href="https://github.com/josevenezuelapadron" target="_blank">Sobre mi</a></li>
+          <li><a href="https://twitter.com/jose_padron712" target="_blank">Contacto</a></li>
         </ul>
       </nav>
     </header>

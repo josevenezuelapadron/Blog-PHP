@@ -1,5 +1,5 @@
 <?php
-  require_once 'includes/conexion.php';
+  require_once '../includes/conexion.php';
 
   if (isset($_POST)) {
     $nombre = isset($_POST['nombre']) ? trim(mysqli_real_escape_string($db, $_POST['nombre'])) : false;
@@ -56,5 +56,5 @@
       $_SESSION['errores'] = $errores;
     }
   }
-  header('Location: index.php');
+  header('Location: ../index.php');
 ?>

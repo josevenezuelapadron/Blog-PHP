@@ -51,7 +51,7 @@ function conseguirCategoria($db, $id) {
   return $result;
 }
 
-function conseguirEntradas($db, $limit = null, $categoria = null) {
+function conseguirEntradas($db, $limit = null, $categoria = null, $busqueda = null) {
   $sql = "SELECT e.*, c.nombre as 'categoria' FROM entradas e INNER JOIN categorias c ON e.categoria_id = c.id ORDER BY e.ID DESC;";
   
   if ($limit != null) {
@@ -60,6 +60,10 @@ function conseguirEntradas($db, $limit = null, $categoria = null) {
 
   if (!empty($categoria)) {
     $sql = "SELECT e.*, c.nombre as 'categoria' FROM entradas e INNER JOIN categorias c ON e.categoria_id = c.id WHERE e.categoria_id = $categoria ORDER BY e.ID DESC;";
+  }
+
+  if ($busqueda != null) {
+    $sql = "SELECT e.*, c.nombre as 'categoria' FROM entradas e INNER JOIN categorias c ON e.categoria_id = c.id WHERE e.titulo LIKE '%$busqueda%' ORDER BY e.ID DESC;";
   }
   
   $entradas = mysqli_query($db, $sql);
@@ -83,3 +87,4 @@ function conseguirEntrada($db, $id) {
 
   return $result;
 }
+

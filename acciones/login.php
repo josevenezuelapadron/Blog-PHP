@@ -1,6 +1,6 @@
 <?php
 
-require_once './includes/conexion.php';
+require_once '../includes/conexion.php';
 
 if (isset($_POST)) {
   if (isset($_SESSION['error_login'])) {
@@ -27,6 +27,6 @@ if (isset($_POST)) {
     $_SESSION['error_login'] = "Login incorrecto";
   }
 }
-header("Location: index.php");
+header("Location: ../index.php");
 
 ?>

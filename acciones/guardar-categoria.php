@@ -1,8 +1,8 @@
 <?php
-require_once 'includes/redireccion.php';
+require_once '../includes/redireccion.php';
 
 if (isset($_POST)) {
-  require_once 'includes/conexion.php';
+  require_once '../includes/conexion.php';
 
   $nombre = isset($_POST['nombre']) ? trim(mysqli_real_escape_string($db, $_POST['nombre'])) : false;
   
@@ -22,4 +22,4 @@ if (isset($_POST)) {
   }
 }
 
-header("Location: index.php");
+header("Location: ../index.php");

@@ -1,6 +1,6 @@
 <?php
-  require_once 'includes/conexion.php';
-  require_once 'includes/redireccion.php';
+  require_once '../includes/conexion.php';
+  require_once '../includes/redireccion.php';
 
   if (isset($_POST)) {
     $nombre = isset($_POST['nombre']) ? trim(mysqli_real_escape_string($db, $_POST['nombre'])) : false;
@@ -62,5 +62,5 @@
       $_SESSION['errores'] = $errores;
     }
   }
-  header('Location: mis-datos.php');
+  header('Location: ../mis-datos.php');
 ?>

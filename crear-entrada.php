@@ -9,7 +9,7 @@
   <p>Añade nuevas entradas al blog para que los usuarios puedan leerlas</p>
   <br>
 
-  <form action="guardar-entrada.php" method="POST">
+  <form action="acciones/guardar-entrada.php" method="POST">
     <label for="titulo">Título:</label>
     <input required type="text" name="titulo">
     <?php echo isset($_SESSION['errores_entradas']) ? mostrarError($_SESSION['errores_entradas'], 'titulo') : ''; ?>

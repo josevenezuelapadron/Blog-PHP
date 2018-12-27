@@ -1,8 +1,8 @@
 <?php
-require_once 'includes/redireccion.php';
+require_once '../includes/redireccion.php';
 
 if (isset($_POST)) {
-  require_once 'includes/conexion.php';
+  require_once '../includes/conexion.php';
 
   $titulo = isset($_POST['titulo']) ? trim(mysqli_real_escape_string($db, $_POST['titulo'])) : false;
   $descripcion = isset($_POST['descripcion']) ? trim(mysqli_real_escape_string($db, $_POST['descripcion'])) : false;
@@ -42,13 +42,13 @@ if (isset($_POST)) {
     }
     
     $guardar = mysqli_query($db, $sql);
-    header("Location: index.php");
+    header("Location: ../index.php");
   } else {
     $_SESSION['errores_entradas'] = $errores;
     if (isset($_GET['editar'])) {
-      header("Location: editar-entrada.php?editar=".$_GET['editar']);
+      header("Location: ../editar-entrada.php?editar=".$_GET['editar']);
     } else {
-      header("Location: crear-entrada.php");
+      header("Location: ../crear-entrada.php");
     }
   }
 }

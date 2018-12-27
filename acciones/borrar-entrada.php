@@ -1,5 +1,5 @@
 <?php
-  require_once 'includes/conexion.php';
+  require_once '../includes/conexion.php';
 
   if (isset($_SESSION['usuario']) && isset($_GET['id'])) {
     $entrada_id = $_GET['id'];
@@ -8,5 +8,5 @@
     mysqli_query($db, $sql);
   }
 
-  header("Location: index.php");
+  header("Location: ../index.php");
 ?>

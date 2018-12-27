@@ -16,7 +16,7 @@
   <p>Edita tu entrada: <b><?= $entrada['TITULO']; ?></b></p>
   <br>
 
-  <form action="guardar-entrada.php?editar=<?= $entrada['ID']; ?>" method="POST">
+  <form action="acciones/guardar-entrada.php?editar=<?= $entrada['ID']; ?>" method="POST">
     <label for="titulo">Título:</label>
     <input required type="text" name="titulo" value="<?= $entrada['TITULO']; ?>">
     <?php echo isset($_SESSION['errores_entradas']) ? mostrarError($_SESSION['errores_entradas'], 'titulo') : ''; ?>

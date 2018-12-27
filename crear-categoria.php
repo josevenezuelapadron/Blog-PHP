@@ -9,7 +9,7 @@
   <p>Añade nuevas categorias para que los usuarios puedan usarlas para crear sus entradas</p>
   <br>
 
-  <form action="guardar-categoria.php" method="POST">
+  <form action="acciones/guardar-categoria.php" method="POST">
     <label for="nombre">Nombre:</label>
     <input type="text" name="nombre">
 
