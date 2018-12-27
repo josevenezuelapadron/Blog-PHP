@@ -11,13 +11,20 @@
 
 <!-- Caja principal -->
 <div id="principal">
-  <h1><?php echo $entrada['TITULO']; ?></h1>
-  <a href="categoria.php?id=<?php echo $entrada['CATEGORIA_ID']; ?>">
-    <h2><?php echo $entrada['categoria']; ?></h2>
+  <h1><?= $entrada['TITULO']; ?></h1>
+  <a href="categoria.php?id=<?= $entrada['CATEGORIA_ID']; ?>">
+    <h2><?= $entrada['categoria']; ?></h2>
   </a>
-  <h4><?php echo $entrada['FECHA']; ?></h4>
+  <h4><?= $entrada['FECHA']; ?> | <?= $entrada['usuario']; ?></h4>
 
-  <p><?php echo $entrada['DESCRIPCION']; ?></p>
+  <p><?= $entrada['DESCRIPCION']; ?></p>
+
+  <br>
+
+  <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['ID'] == $entrada['USUARIO_ID']): ?>
+    <a href="editar-entrada.php?id=<?= $entrada['ID']; ?>" class="boton boton-verde">Editar entrada</a>
+    <a href="borrar-entrada.php?id=<?= $entrada['ID']; ?>" class="boton boton-rojo">Borrar entrada</a>
+  <?php endif; ?>
 </div>
 
 <?php require_once 'includes/pie.php'; ?>
